@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Birthday Reminding System Powered By DrChrono">
+    <meta name="author" content="Jian Gong">
+    <title>BDayReminder</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../static/css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css">
+
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {$('[data-toggle="popover"]').popover()})
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <img class="pull-right" id="header-img" src="https://app.drchrono.com/site_media/cb-cca2e4af/public/images_2016/logo-dark.svg">
+            <h3 >Birthday Reminder</h3>
+        </div>
+        <div class="row">
+            <div class="col-sm-8" id="left-container">
+                <form>
+                    <div class="form-group">
+                        <label>Patients Whose Birthday Within Range</label>
+                        <div id="dropdown-btn" class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dropdown<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>One Day</li>
+                                <li>Two Days</li>
+                                <li>Five Days</li>
+                                <li>One Week</li>
+                                <li>Two Weeks</li>
+                                <li>Three Weeks</li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </div>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>First Name</th>
+                                <th>Middle Name</th>
+                                <th>Last Name</th>
+                                <th>Gender</th>
+                                <th>Birthday</th>
+                                <th>Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-sm-4" id="right-container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Default Email Content</div>
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Title</li>
+                            <li class="list-group-item">Content</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#emailEditModal">Edit Default Email</button>
+                <button type="button" class="btn btn-primary" container="body" data-toggle="popover" data-placement="bottom" title="Instruction" data-content="Please use '' to replace the patient's given name, and '' for the last name.">Instructions</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="emailEditModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span> </button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
