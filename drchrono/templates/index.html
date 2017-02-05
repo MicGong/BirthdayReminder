@@ -25,7 +25,7 @@
         <div class="jumbotron">
             <h1>Birthday Reminding System</h1>
             <p class="lead">Powered By drchrono</p>
-            <p><a class="btn btn-lg btn-success" href="#" role="button">Login with drchrono</a></p>
+            <p><a class="btn btn-lg btn-success" href="{% url 'social:begin' 'drchrono' %}" role="button">Login with drchrono</a></p>
         </div>
 
         <footer class="footer">
@@ -34,8 +34,8 @@
 
     </div> 
 
-<a href="{% url 'social:begin' 'drchrono' %}">
+<!-- <a href="{% url 'social:begin' 'drchrono' %}">
     drchrono OAuth
-</a>
+</a> -->
 </body>
 </html>
