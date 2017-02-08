@@ -1,3 +1,4 @@
 /social_auth_drchrono/auth_config.py
 *.pyc
 drchrono/*.pyc
+db.sqlite3
