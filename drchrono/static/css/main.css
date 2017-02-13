@@ -1,16 +1,18 @@
 body {
-  padding-top: 5px;
+  /*padding-top: 5px;*/
   padding-bottom: 20px;
 }
 
-.header,
+/*.header,
 .footer {
     padding: 15px 15px 15px 15px;
-}
+}*/
+
 
 #header-img {
-    padding-top: 15px;
+    padding-top: 5px;
 }
+
 
 #left-container, #right-container {
     text-align: center;
@@ -21,10 +23,25 @@ body {
     display: inline-block;
 }
 
-#left-container {
+/*#left-container {
     background-color: #FC6E51;
 }
 
 #right-container {
     background-color: #4FC1E9;
+}*/
+
+.table th {
+    text-align: center;
+}
+
+#collapse-search-btn {
+ /*   position: absolute;
+    right: 20px;
+    top: 20px;*/
+    margin: 10px 20px 10px;
+}
+
+#email-body {
+    resize: none;
 }
