@@ -16,6 +16,11 @@ import os
 # Authentication Settings - Keep Private for SECURITY
 from social_auth_drchrono.auth_config import *
 
+with open('/etc/drchrono/bdayreminder_setting.txt','r') as f:
+	data = []
+	for line in f:
+		data.append(line.strip())
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = os.path.realpath(os.path.dirname(__file__))
 
@@ -23,10 +28,10 @@ PROJECT_DIR = os.path.realpath(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=*l&a&rk7jmiw$3euke*z9lu-na!^j^i&ddejfik!ajqlaymmc'
+SECRET_KEY = data[0]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -124,7 +129,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'drchronoemailsender@gmail.com'
-EMAIL_HOST_PASSWORD = 'gong@123456'
+EMAIL_HOST_PASSWORD = data[1]
 EMAIL_PORT = 587
 DEFAULT_FROM_EMAIL = 'drchronoemailsender@gmail.com'
 
